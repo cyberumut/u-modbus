@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>U-Modbus Support</title><link rel="stylesheet" href="style.css"><link rel="icon" href="img/icon.png"></head>
+<body><div class="wrap">
+<header><img src="img/icon.png" alt=""><div><h1>Support</h1><p>U-Modbus · Modbus TCP &amp; RTU Master</p></div></header>
+<nav><a href="index.html">Home</a><a href="support.html">Support</a><a href="privacy.html">Privacy Policy</a></nav>
+<div class="doc">
+<h2>Contact</h2>
+<p>Questions, bug reports and feature requests: <a href="https://github.com/cyberumut/u-modbus/issues">open an issue on GitHub</a>. We usually answer within two business days. Please include your macOS version, the device type and, if possible, a saved traffic log (Traffic tab → Save…).</p>
+<h2>Getting started</h2>
+<ol>
+<li><b>Try the demo:</b> on the welcome screen choose “Try the Demo”, or use <i>File → Add Demo Devices</i>. Three simulated devices start on 127.0.0.1:1502–1504.</li>
+<li><b>Add a device:</b> click <i>Add Device</i>, choose Modbus TCP, RTU (serial) or RTU over TCP and enter the address, unit ID and timeout.</li>
+<li><b>Discover:</b> select <i>Discover Devices</i> in the sidebar and scan a subnet (e.g. 192.168.1.0/24) or a serial bus.</li>
+<li><b>Add points</b> or use the Register Browser and choose “Add as Point”, then click <i>Connect &amp; Poll</i>.</li>
+</ol>
+<h2>Troubleshooting</h2>
+<ul>
+<li><b>Timeouts on RTU:</b> check baud rate, parity and stop bits (8E1 is the Modbus default), A/B wiring, termination, and increase “Delay between requests”.</li>
+<li><b>Illegal Data Address (02):</b> the register does not exist on the device. Many manuals use 1-based (40001) numbering — U-Modbus uses 0-based protocol addresses; enable <i>Settings → Show addresses as Modicon</i> to compare.</li>
+<li><b>Strange float or 32-bit values:</b> try another byte/word order (CDAB is common).</li>
+<li><b>No serial port listed:</b> connect the USB-RS485 adapter and click refresh. Adapters appear as /dev/cu.* devices.</li>
+</ul>
+</div>
+<footer>© 2026 Loopcode</footer>
+</div></body></html>
